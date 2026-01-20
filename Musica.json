@@ -1,0 +1,29 @@
+{
+  'Utente': [
+{
+'idUtente': 'c4_M1CH3L3',
+'nome': 'Michele' “ ,
+“cognome”: “ “,
+“email”: “ “,
+“nazionalita”: “ “,
+“dataScadenzaContratto”: “ “
+}
+],
+“Playlist”: [
+{
+“idPlaylist”: “ “,
+“titolo”: “ “,
+“dataCreazione”: “ “
+}
+],
+“Brano”: [
+{
+“idBrano”: “ “,
+“titolo”: “ “ ,
+“durata”: “ “ ,
+“dataPubblicazione” : “ “ ,
+“urlStreaming”: “ “ ,
+“numeroAscolti” : “ “ ,
+“numeroLike” : “ “
+}
+],
