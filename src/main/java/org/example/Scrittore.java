@@ -9,10 +9,10 @@ import java.util.logging.Logger;
 
 public class Scrittore implements Runnable{
 
-    String Musica;
+    private String Musica;
 
     public Scrittore(String nomeFile){
-        this.Musica = Musica;
+        this.Musica = nomeFile;
     }
 
     @Override

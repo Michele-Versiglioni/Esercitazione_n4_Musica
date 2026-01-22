@@ -7,7 +7,7 @@ public class Lettore implements Runnable{
     String Musica;
 
     public Lettore(String nomeFile){
-        this.Musica = Musica;
+        this.Musica = nomeFile;
     }
 
     public void leggi(){

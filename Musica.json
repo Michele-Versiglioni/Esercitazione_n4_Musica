@@ -1,29 +1,30 @@
 {
-  'Utente': [
-{
-'idUtente': 'c4_M1CH3L3',
-'nome': 'Michele' “ ,
-“cognome”: “ “,
-“email”: “ “,
-“nazionalita”: “ “,
-“dataScadenzaContratto”: “ “
+  "Utente": [
+    {
+      "idUtente": "c4_M1CH3L3",
+      "nome": "Michele",
+      "cognome": "Versiglioni",
+      "email": "micheleversiglioni07@gmail.com",
+      "nazionalita": "Italiano",
+      "dataScadenzaContratto": "15/10/2026"
+    }
+  ],
+  "Playlist": [
+    {
+      "idPlaylist": "P0152684",
+      "titolo": "Chill",
+      "dataCreazione": "12/02/2022"
+    }
+  ],
+  "Brano": [
+    {
+      "idBrano": "BR435682",
+      "titolo": "7 years",
+      "durata": "",
+      "dataPubblicazione": "",
+      "urlStreaming": "",
+      "numeroAscolti": "",
+      "numeroLike": ""
+    }
+  ]
 }
-],
-“Playlist”: [
-{
-“idPlaylist”: “ “,
-“titolo”: “ “,
-“dataCreazione”: “ “
-}
-],
-“Brano”: [
-{
-“idBrano”: “ “,
-“titolo”: “ “ ,
-“durata”: “ “ ,
-“dataPubblicazione” : “ “ ,
-“urlStreaming”: “ “ ,
-“numeroAscolti” : “ “ ,
-“numeroLike” : “ “
-}
-],
