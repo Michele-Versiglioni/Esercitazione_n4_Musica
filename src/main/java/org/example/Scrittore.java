@@ -1,5 +1,8 @@
 package org.example;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -10,9 +13,10 @@ import java.util.logging.Logger;
 public class Scrittore implements Runnable{
 
     private String Musica;
+    private Object Brano;
 
-    public Scrittore(String nomeFile){
-        this.Musica = nomeFile;
+    public Scrittore(String file){
+        this.Musica = file;
     }
 
     @Override
@@ -39,6 +43,15 @@ public class Scrittore implements Runnable{
                     Logger.getLogger(Scrittore.class.getName()).log(Level.SEVERE, null, ex);
                 }
 
+        }
+    }
+    public void leggiGson(Brano brano){
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        String json= gson.toJson(Brano);
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("Musica.json"))){
+            writer.write(json);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }
