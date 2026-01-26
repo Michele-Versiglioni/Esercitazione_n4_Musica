@@ -7,35 +7,33 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class Lettore implements Runnable{
-    String Musica;
+public class Lettore implements Runnable {
 
-    public Lettore(String file){
-        this.Musica = file;
+    private String musica;
+
+    public Lettore(String file) {
+        this.musica = file;
     }
 
-    public void leggi(){
-        FileReader fr;
-        int i;
-        try {
-            fr = new FileReader(Musica);
-            while ((i=fr.read()) != -1)
-                System.out.print((char) i);
-
-            System.out.print("\n\r");
-            fr.close();
-        } catch (IOException ex) {
-            System.err.println("Errore in lettura!");
-        }
-    }
-    public void run() {
-        leggi();
-    }
     public Brano leggiDalFile() throws FileNotFoundException {
-        try (BufferedReader reader = new BufferedReader(new FileReader("Musica.json"))){
+        try (BufferedReader reader = new BufferedReader(new FileReader(musica))) {
             Gson gson = new Gson();
-            String brano;
-            brano = gson.toJson(reader);
+            return gson.fromJson(reader, Brano.class);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    @Override
+    public void run() {
+        try {
+            Brano b = leggiDalFile();
+            if (b != null) {
+                System.out.println(b);
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
         }
     }
 }

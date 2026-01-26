@@ -5,12 +5,16 @@ public class Brano {
     private String titolo;
     private String durata;
     private String DataPubblicazione;
+    private int numeroAscolti;
+    private int numeroLike;
 
     public Brano(String idBrano, String titolo, String durata, String dataPubblicazione) {
         this.idBrano = idBrano;
         this.titolo = titolo;
         this.durata = durata;
         DataPubblicazione = dataPubblicazione;
+        this.numeroAscolti = numeroAscolti;
+        this.numeroLike = numeroLike;
     }
 
     public String getIdBrano() {
@@ -48,5 +52,33 @@ public class Brano {
         DataPubblicazione = dataPubblicazione;
         return this;
     }
-}
 
+    public int getNumeroAscolti() {
+        return numeroAscolti;
+    }
+
+    public Brano setNumeroAscolti(int numeroAscolti) {
+        this.numeroAscolti = numeroAscolti;
+        return this;
+    }
+
+    public int getNumeroLike() {
+        return numeroLike;
+    }
+
+    public Brano setNumeroLike(int numeroLike) {
+        this.numeroLike = numeroLike;
+        return this;
+    }
+    @Override
+    public String toString(){
+        return "Brano{" +
+                "idBrano='" + idBrano + '\'' +
+                ", titolo='" + titolo + '\'' +
+                ", durata='" + durata + '\'' +
+                ", dataPubblicazione='" + DataPubblicazione + '\'' +
+                ", numeroAscolti='" + numeroAscolti + '\'' +
+                ", numeroLike='" + numeroLike + '\'' +
+                '}';
+    }
+}

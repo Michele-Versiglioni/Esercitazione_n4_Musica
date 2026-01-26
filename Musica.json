@@ -1,30 +1,8 @@
 {
-  "Utente": [
-    {
-      "idUtente": "c4_M1CH3L3",
-      "nome": "Michele",
-      "cognome": "Versiglioni",
-      "email": "micheleversiglioni07@gmail.com",
-      "nazionalita": "Italiano",
-      "dataScadenzaContratto": "15/10/2026"
-    }
-  ],
-  "Playlist": [
-    {
-      "idPlaylist": "P0152684",
-      "titolo": "Chill",
-      "dataCreazione": "12/02/2022"
-    }
-  ],
-  "Brano": [
-    {
-      "idBrano": "BR435682",
-      "titolo": "7 years",
-      "durata": "",
-      "dataPubblicazione": "",
-      "urlStreaming": "",
-      "numeroAscolti": "",
-      "numeroLike": ""
-    }
-  ]
+  "idBrano": "BR34004",
+  "titolo": "7 years",
+  "durata": "3.01",
+  "DataPubblicazione": "12/05/2014",
+  "numeroAscolti": 0,
+  "numeroLike": 0
 }
