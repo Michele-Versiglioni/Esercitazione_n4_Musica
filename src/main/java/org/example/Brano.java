@@ -5,10 +5,10 @@ public class Brano {
     private String titolo;
     private String durata;
     private String DataPubblicazione;
-    private int numeroAscolti;
+    private long numeroAscolti;
     private int numeroLike;
 
-    public Brano(String idBrano, String titolo, String durata, String dataPubblicazione) {
+    public Brano(String idBrano, String titolo, String durata, String dataPubblicazione, long numeroAscolti, int numeroLike) {
         this.idBrano = idBrano;
         this.titolo = titolo;
         this.durata = durata;
@@ -53,7 +53,7 @@ public class Brano {
         return this;
     }
 
-    public int getNumeroAscolti() {
+    public long getNumeroAscolti() {
         return numeroAscolti;
     }
 
