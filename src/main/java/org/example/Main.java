@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
 
-        Brano b1 = new Brano("BR34004", "7 years", "4:00", "2015", 2400000000L, 12401467);
+        Brano b1 = new Brano("BR001", "7 years", "4:00", 2015, 2400000000L, 12401467);
         String file = "Musica.json";
 
         Scrittore s = new Scrittore(file);

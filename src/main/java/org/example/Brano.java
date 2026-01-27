@@ -2,17 +2,17 @@ package org.example;
 
 public class Brano {
     private String idBrano;
-    private String titolo;
+    private String titoloB;
     private String durata;
-    private String DataPubblicazione;
+    private int annoPubblicazioneB;
     private long numeroAscolti;
     private int numeroLike;
 
-    public Brano(String idBrano, String titolo, String durata, String dataPubblicazione, long numeroAscolti, int numeroLike) {
+    public Brano(String idBrano, String titoloB, String durata, int annoPubblicazioneB, long numeroAscolti, int numeroLike) {
         this.idBrano = idBrano;
-        this.titolo = titolo;
+        this.titoloB = titoloB;
         this.durata = durata;
-        DataPubblicazione = dataPubblicazione;
+        this.annoPubblicazioneB = annoPubblicazioneB;
         this.numeroAscolti = numeroAscolti;
         this.numeroLike = numeroLike;
     }
@@ -27,11 +27,11 @@ public class Brano {
     }
 
     public String getTitolo() {
-        return titolo;
+        return titoloB;
     }
 
-    public Brano setTitolo(String titolo) {
-        this.titolo = titolo;
+    public Brano setTitolo(String titoloB) {
+        this.titoloB = titoloB;
         return this;
     }
 
@@ -44,12 +44,12 @@ public class Brano {
         return this;
     }
 
-    public String getDataPubblicazione() {
-        return DataPubblicazione;
+    public int getannoPubblicazioneB() {
+        return annoPubblicazioneB;
     }
 
-    public Brano setDataPubblicazione(String dataPubblicazione) {
-        DataPubblicazione = dataPubblicazione;
+    public Brano setannoPubblicazioneB(int annoPubblicazioneB) {
+        this.annoPubblicazioneB = annoPubblicazioneB;
         return this;
     }
 
@@ -74,11 +74,11 @@ public class Brano {
     public String toString(){
         return "Brano{" +
                 "idBrano='" + idBrano + '\'' +
-                ", titolo='" + titolo + '\'' +
+                ", titolo='" + titoloB + '\'' +
                 ", durata='" + durata + '\'' +
-                ", dataPubblicazione='" + DataPubblicazione + '\'' +
-                ", numeroAscolti='" + numeroAscolti + '\'' +
-                ", numeroLike='" + numeroLike + '\'' +
+                ", dataPubblicazione='" + annoPubblicazioneB + '\'' +
+                ", numeroAscolti='" + numeroAscolti +
+                ", numeroLike='" + numeroLike +
                 '}';
     }
 }
