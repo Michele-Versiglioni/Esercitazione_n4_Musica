@@ -1,38 +1,22 @@
 package org.example;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.util.List;
 
 public class Scrittore implements Runnable {
 
     private String musica;
-    private Brano brano;
+    private List<Brano> lista;
+    private GestioneFile gestioneFile;
 
-    public Scrittore(String file) {
-        this.musica = file;
-    }
-
-    public void setBrano(Brano brano) {
-        this.brano = brano;
+    public Scrittore(String musica, List<Brano> lista, GestioneFile gestioneFile) {
+        this.musica = musica;
+        this.lista = lista;
+        this.gestioneFile = gestioneFile;
     }
 
     @Override
     public void run() {
-        scriviJson();
-    }
-
-    public void scriviJson() {
-        Gson gson = new GsonBuilder().setPrettyPrinting().create();
-        String json = gson.toJson(brano);
-
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(musica))) {
-            writer.write(json);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        gestioneFile.scriviJson(musica, lista);
+        System.out.println("File JSON scritto correttamente");
     }
 }
