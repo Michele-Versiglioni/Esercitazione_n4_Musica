@@ -1,16 +1,33 @@
 package org.example;
 
+/**
+ * Classe Brano che rappresenta un brano con informazioni di base.
+ */
 public class Brano {
+
     private String idBrano;
     private String titoloB;
+    private String cantante;
     private String durata;
     private int annoPubblicazioneB;
     private long numeroAscolti;
     private int numeroLike;
 
-    public Brano(String idBrano, String titoloB, String durata, int annoPubblicazioneB, long numeroAscolti, int numeroLike) {
+    /**
+     * Costruttore della classe Brano.
+     *
+     * @param idBrano codice identificativo del brano
+     * @param titoloB titolo del brano
+     * @param cantante nome del cantante
+     * @param durata durata del brano
+     * @param annoPubblicazioneB anno di pubblicazione
+     * @param numeroAscolti numero di ascolti
+     * @param numeroLike numero di like
+     */
+    public Brano(String idBrano, String titoloB, String cantante, String durata, int annoPubblicazioneB, long numeroAscolti, int numeroLike) {
         this.idBrano = idBrano;
         this.titoloB = titoloB;
+        this.cantante = cantante;
         this.durata = durata;
         this.annoPubblicazioneB = annoPubblicazioneB;
         this.numeroAscolti = numeroAscolti;
@@ -32,6 +49,15 @@ public class Brano {
 
     public Brano setTitolo(String titoloB) {
         this.titoloB = titoloB;
+        return this;
+    }
+
+    public String getCantante() {
+        return cantante;
+    }
+
+    public Brano setCantante(String cantante) {
+        this.cantante = cantante;
         return this;
     }
 
@@ -70,15 +96,22 @@ public class Brano {
         this.numeroLike = numeroLike;
         return this;
     }
+
+    /**
+     * Restituisce una rappresentazione testuale del brano.
+     *
+     * @return stringa con tutte le informazioni del brano
+     */
     @Override
-    public String toString(){
+    public String toString() {
         return "Brano{" +
                 "idBrano='" + idBrano + '\'' +
                 ", titolo='" + titoloB + '\'' +
+                ", cantante='" + cantante + '\'' +
                 ", durata='" + durata + '\'' +
                 ", dataPubblicazione='" + annoPubblicazioneB + '\'' +
-                ", numeroAscolti='" + numeroAscolti +
-                ", numeroLike='" + numeroLike +
+                ", numeroAscolti='" + numeroAscolti + '\'' +
+                ", numeroLike='" + numeroLike + '\'' +
                 '}';
     }
 }
