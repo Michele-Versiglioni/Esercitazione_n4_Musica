@@ -2,17 +2,19 @@
   {
     "idBrano": "1",
     "titoloB": "7 years",
+    "cantante": "Lukas Graham",
     "durata": "3:01",
     "annoPubblicazioneB": 2014,
-    "numeroAscolti": 1200000,
-    "numeroLike": 32134
+    "numeroAscolti": 12000000,
+    "numeroLike": 56432
   },
   {
     "idBrano": "2",
-    "titoloB": "re dell\u0027olio buono",
-    "durata": "3:15",
+    "titoloB": "Re Dell\u0027olio",
+    "cantante": "Tommaso Orsini",
+    "durata": "2:45",
     "annoPubblicazioneB": 2024,
-    "numeroAscolti": 5,
-    "numeroLike": 5
+    "numeroAscolti": 50,
+    "numeroLike": 20
   }
 ]
